@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Roller Coaster Accident Analysis</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="static/style.css">
+    <link href="https://cdn.anychart.com/releases/v8/css/anychart-ui.min.css" type="text/css" rel="stylesheet">
+    <script src="https://cdn.anychart.com/releases/8.10.0/js/anychart-base.min.js" type="text/javascript"></script>
+    <script src="https://cdn.anychart.com/releases/8.10.0/js/anychart-core.min.js" type="text/javascript"></script>
+    <script src="https://cdn.anychart.com/releases/8.10.0/js/anychart-map.min.js" type="text/javascript"></script>
+    <script src='https://cdn.anychart.com/geodata/2.1.1/countries/united_states_of_america/united_states_of_america.js' type="text/javascript"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.3.15/proj4.js' type="text/javascript"></script>
+    <script src="https://cdn.anychart.com/releases/v8/js/anychart-ui.min.js" type="text/javascript"></script>
+    <script src="https://cdn.plot.ly/plotly-2.2.0.min.js"></script>
+</head>
+<body>
+  <div class="jumbotron">
+    <h1>Theme Park Accidents Analysis</h1>
+    <h4>1988-2009</h4>
+  </div>
+  <div id="map" class='choropleth col-sm-12'>
+    <h3>Accidents by State</h3>
+    <p>Greyed states have no data for accidents in this time frame.</p>
+  </div>
+  <div class="chart row">
+    <div class="col-sm-4">
+      <h3>Number of Accidents By Gender</h3>
+      <div id="bar"></div>
+    </div>
+    <div class="pie col-sm-4">
+      <h3>Top 10 Rides for Accidents</h3>
+      <div id="PieChart"></div>
+    </div>
+    <div class="col-sm-4">
+      <h3>Number of Injuries by Age</h3>
+      <div id="scatter"></div>
+    </div>
+  </div>
+  <div class="col-sm-12">
+    <h3>Data for Accidents</h3>
+    <div>
+      <table class="table-bordered">
+        <thead class='thead-light'>
+          <th>City</th>
+          <th>Date</th>
+          <th>Accident Description</th>
+          <th>State</th>
+          <th>Youngest Injured</th>
+          <th>Business Type</th>
+          <th>Injury Category</th>
+          <th>Device Category</th>
+          <th>Device Type</th>
+          <th>Gender</th>
+          <th>Industry Sector</th>
+          <th>Injury Description</th>
+          <th>Manufacturer</th>
+          <th>Number Injured</th>
+          <th>Tradename/Generic</th>
+        </thead>
+        <tbody id="table"></tbody>
+      </table>
+    </div>
+  </div>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="static/logic.js"></script>
+
+</body>
+</html>
