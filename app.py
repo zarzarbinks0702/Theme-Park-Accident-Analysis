@@ -2,10 +2,7 @@ from flask import Flask, render_template, jsonify, send_from_directory, request
 import json
 import pandas as pd
 import numpy as np
-import os
-from os import environ
 import sqlite3 as sql
-import sys
 
 #init app and class
 def create_app():
