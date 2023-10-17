@@ -20,4 +20,4 @@ Plotly
 AnyChart
 
 ------------------------------------------------------------------------------------
-Runs locally with python and flask installed. This repo also has heroku functionality (https://amusement-accident-analysis.herokuapp.com/).
+Runs locally with python and flask installed. This repo also has web-based functionality (https://theme-park-accident-analysis.onrender.com).
